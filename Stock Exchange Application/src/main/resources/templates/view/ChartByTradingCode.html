@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/main_layout}">
+<head></head>
+<body>
+
+    <div layout:fragment="content">
+
+        <div class="container">
+            <div class="line_Chart mySpace">
+                <div class="CompanyName">
+                    <input id="tradingCode" type="hidden"  th:value="${tradingCode}"/>
+                    <h4 th:text="'Company Name : ' + ${companyName} "></h4>
+                </div>
+
+                <div class="mySpace">
+                    <h4>Bar Chart</h4>
+                </div>
+
+                <canvas id="chartOne">
+
+                </canvas>
+
+                <div class="mySpace">
+                    <h4>Line Chart</h4>
+                </div>
+
+                <canvas id="chartTwo">
+
+                </canvas>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

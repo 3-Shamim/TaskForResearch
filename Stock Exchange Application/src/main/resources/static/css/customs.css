@@ -1,0 +1,105 @@
+body {
+    background: #dfe4ea;
+}
+.mySpace {
+    margin: 10px;
+}
+#clock {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 7px;
+}
+
+/*---------------- Log In -----------------------0*/
+.loginWrapper {
+    overflow: hidden;
+    background: #fff;
+    width: 80%;
+    min-height: 500px;
+    padding: 20px;
+    margin: 80px auto auto;
+    border-radius: 5px;
+}
+.loginImage {
+    overflow: hidden;
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+.loginImage img{
+    width: 250px;
+
+    margin-top: 25%;
+}
+.loginForm {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 5%;
+    border-left: 1px solid #858585;
+}
+.loginForm  form {
+    width: 80%;
+    margin: auto;
+}
+.loginFormTitle {
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: #2196f3;
+}
+.loginFormTitle:after {
+    content: '';
+    display: block;
+    border-bottom: 1px solid #2196f3;
+}
+.passwordReset {
+    margin: 5px;
+}
+.passwordReset a {
+    color: #333333;
+}
+.passwordReset a:hover {
+    color: #2196f3;
+}
+.createAccount {
+    margin-top: 35%;
+}
+.createAccount a {
+    color: #333333;
+ }
+.createAccount a:hover {
+    color: #2196f3;
+ }
+
+/*-------------- Latest Share Price -----------------*/
+.latestSharePriceAllContent {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.latestSharePriceHeader {
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+.latestSharePriceTable {
+    background-color: #ffffff;
+}
+
+.searchCompanyInfo {
+    padding: 10px;
+}
+
+.CompanyName {
+    text-align: center;
+    padding: 20px;
+}
+.CompanyName:after {
+    content: '';
+    display: block;
+    border-bottom: 1px solid #000000;
+}

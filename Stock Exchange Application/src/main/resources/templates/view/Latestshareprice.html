@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{fragments/main_layout}">
+<head></head>
+<body>
+
+    <div layout:fragment="content">
+
+        <div class="container">
+
+            <div class="latestSharePriceHeader">
+                <h4 th:text="${latestSharePrice}"></h4>
+            </div>
+            <div class="latestSharePriceAllContent">
+                <div class="searchCompanyInfo">
+                    <form class="form-inline my-2 my-lg-0" action="/latestshareprice" method="get">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search By Trading Code" name="tradingCode"/>
+                        <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="latestSharePriceTable">
+                    <table class="table table-bordered ">
+                        <thead class="thead-dark">
+                        <tr>
+                            <th>TRADING CODE</th>
+                            <th>LTP*</th>
+                            <th>HIGH</th>
+                            <th>LOW</th>
+                            <th>CLOSEP*</th>
+                            <th>YCP</th>
+                            <th>CHANGE</th>
+                            <th>TRADE</th>
+                            <th>VALUE(mn)</th>
+                            <th>VOLUME</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="sharePrice : ${sharePrices}">
+                            <td>
+                                <a th:href="@{'/chart/'+${sharePrice.company.tradingCode}}" th:text="${sharePrice.company.tradingCode}"></a>
+                            </td>
+                            <td th:text="${sharePrice.ltp}"></td>
+                            <td th:text="${sharePrice.high}"></td>
+                            <td th:text="${sharePrice.low}"></td>
+                            <td th:text="${sharePrice.closep}"></td>
+                            <td th:text="${sharePrice.ycp}"></td>
+                            <td th:text="${sharePrice._change}"></td>
+                            <td th:text="${sharePrice.trade}"></td>
+                            <td th:text="${sharePrice.value}"></td>
+                            <td th:text="${sharePrice.volume}"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
